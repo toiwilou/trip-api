@@ -14,15 +14,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class NoticeController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         NoticeService $noticeService)
     {
         $this->key = 'notice';
-        $this->appHelper = $appHelper;
+        $this->helper = $appHelper;
         $this->service = $noticeService;
     }
 
@@ -30,7 +30,7 @@ final class NoticeController extends AbstractController
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -40,7 +40,7 @@ final class NoticeController extends AbstractController
     {
         if (!$notice) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($notice, $this->key);
+        $data = $this->helper->serialize($notice, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }

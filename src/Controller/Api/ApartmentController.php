@@ -15,15 +15,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class ApartmentController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         ApartmentService $apartmentService)
     {
         $this->key = 'apartment';
-        $this->appHelper = $appHelper;
+        $this->helper = $appHelper;
         $this->service = $apartmentService;
     }
 
@@ -31,7 +31,7 @@ final class ApartmentController extends AbstractController
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -41,7 +41,7 @@ final class ApartmentController extends AbstractController
     {
         if (!$apartment) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($apartment, $this->key);
+        $data = $this->helper->serialize($apartment, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -51,7 +51,7 @@ final class ApartmentController extends AbstractController
     {
         if (!$city) return new JsonResponse(['error' => 'Not found'], 404);
         
-        $apartments = $this->appHelper->serialize(
+        $apartments = $this->helper->serialize(
             $this->service->getApartmentsByCity($city->getId()), $this->key
         );
 

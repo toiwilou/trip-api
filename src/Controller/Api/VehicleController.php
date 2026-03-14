@@ -15,15 +15,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class VehicleController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         VehicleService $vehicleService)
     {
         $this->key = 'vehicle';
-        $this->appHelper = $appHelper;
+        $this->helper = $appHelper;
         $this->service = $vehicleService;
     }
 
@@ -31,7 +31,7 @@ final class VehicleController extends AbstractController
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -41,7 +41,7 @@ final class VehicleController extends AbstractController
     {
         if (!$vehicle) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($vehicle, $this->key);
+        $data = $this->helper->serialize($vehicle, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -51,7 +51,7 @@ final class VehicleController extends AbstractController
     {
         if (!$city) return new JsonResponse(['error' => 'Not found'], 404);
         
-        $vehicles = $this->appHelper->serialize(
+        $vehicles = $this->helper->serialize(
             $this->service->getVehiclesByCity($city->getId()), $this->key
         );
 

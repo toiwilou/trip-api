@@ -14,15 +14,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class PaymentController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         PaymentService $paymentService)
     {
         $this->key = 'payment';
-        $this->appHelper = $appHelper;
+        $this->helper = $appHelper;
         $this->service = $paymentService;
     }
 
@@ -30,7 +30,7 @@ final class PaymentController extends AbstractController
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -40,7 +40,7 @@ final class PaymentController extends AbstractController
     {
         if (!$payment) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($payment, $this->key);
+        $data = $this->helper->serialize($payment, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }

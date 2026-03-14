@@ -14,14 +14,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class CategoryVehicleController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         CategoryVehicleService $categoryVehicleService)
     {
-        $this->appHelper = $appHelper;
+        $this->helper = $appHelper;
         $this->key = 'category_vehicle';
         $this->service = $categoryVehicleService;
     }
@@ -30,7 +30,7 @@ final class CategoryVehicleController extends AbstractController
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -40,7 +40,7 @@ final class CategoryVehicleController extends AbstractController
     {
         if (!$category) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($category, $this->key);
+        $data = $this->helper->serialize($category, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }

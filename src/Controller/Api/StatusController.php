@@ -14,15 +14,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class StatusController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         StatusService $statusService)
     {
         $this->key = 'status';
-        $this->appHelper = $appHelper;
+        $this->helper = $appHelper;
         $this->service = $statusService;
     }
 
@@ -30,7 +30,7 @@ final class StatusController extends AbstractController
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -40,7 +40,7 @@ final class StatusController extends AbstractController
     {
         if (!$status) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($status, $this->key);
+        $data = $this->helper->serialize($status, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }

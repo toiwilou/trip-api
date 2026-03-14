@@ -14,15 +14,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class HistoryController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         HistoryService $historyService)
     {
         $this->key = 'history';
-        $this->appHelper = $appHelper;
+        $this->helper = $appHelper;
         $this->service = $historyService;
     }
 
@@ -30,7 +30,7 @@ final class HistoryController extends AbstractController
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -40,7 +40,7 @@ final class HistoryController extends AbstractController
     {
         if (!$history) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($history, $this->key);
+        $data = $this->helper->serialize($history, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }

@@ -14,14 +14,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class ReservationApartmentController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         ReservationApartmentService $reservationApartmentService)
     {
-        $this->appHelper = $appHelper;
+        $this->helper = $appHelper;
         $this->key = 'reservation_apartment';
         $this->service = $reservationApartmentService;
     }
@@ -30,7 +30,7 @@ final class ReservationApartmentController extends AbstractController
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -40,7 +40,7 @@ final class ReservationApartmentController extends AbstractController
     {
         if (!$reservation) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($reservation, $this->key);
+        $data = $this->helper->serialize($reservation, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }

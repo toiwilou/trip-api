@@ -14,23 +14,23 @@ use Symfony\Component\HttpFoundation\Request;
 final class UserController extends AbstractController
 {
     private $key;
+    private $helper;
     private $service;
-    private $appHelper;
 
     public function __construct(
         AppHelper $appHelper,
         UserService $userService)
     {
         $this->key = 'user';
+        $this->helper = $appHelper;
         $this->service = $userService;
-        $this->appHelper = $appHelper;
     }
 
     #[Route('', methods: ['GET'])]
     public function index(): JsonResponse
     {
         $collection = $this->service->getAll();
-        $data = $this->appHelper->serialize($collection, $this->key);
+        $data = $this->helper->serialize($collection, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
@@ -40,7 +40,7 @@ final class UserController extends AbstractController
     {
         if (!$user) return new JsonResponse(['error' => 'Not found'], 404);
 
-        $data = $this->appHelper->serialize($user, $this->key);
+        $data = $this->helper->serialize($user, $this->key);
 
         return new JsonResponse($data, 200, [], true);
     }
