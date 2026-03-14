@@ -1,0 +1,38 @@
+{
+    "0": {
+        "name": "Chambre",
+        "advantage": "Loyer très bas, idéal pour étudiants ou séjours courts, peu d’entretien"
+    },
+    "1": {
+        "name": "Studio",
+        "advantage": "Loyer abordable, optimisé et fonctionnel, parfait pour une personne seule, peu de charges"
+    },
+    "2": {
+        "name": "T1 / F1",
+        "advantage": "Plus confortable qu’un studio, meilleure séparation des espaces, idéal pour personne seule ou jeune couple"
+    },
+    "3": {
+        "name": "T1 bis / F1 bis",
+        "advantage": "Espace de vie plus agréable, peut accueillir coin nuit séparé, toujours économique"
+    },
+    "4": {
+        "name": "T2 / F2",
+        "advantage": "Confortable pour un couple, bonne séparation jour/nuit, polyvalent (télétravail, rangement)"
+    },
+    "5": {
+        "name": "T3 / F3",
+        "advantage": "Idéal pour un couple avec enfant, spacieux, possibilité d’un bureau / chambre d’amis"
+    },
+    "6": {
+        "name": "T4 / F4",
+        "advantage": "Confort familial, adapté aux grandes familles, forte demande en location"
+    },
+    "7": {
+        "name": "Duplex",
+        "advantage": "Espace motivant et structuré, séparation claire des zones jour/nuit, charme et volume supérieur"
+    },
+    "8": {
+        "name": "Loft",
+        "advantage": "Grande hauteur sous plafond, style moderne et lumineux, très modulable"
+    }
+}

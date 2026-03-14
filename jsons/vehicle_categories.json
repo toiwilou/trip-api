@@ -1,0 +1,38 @@
+{
+    "0": {
+        "name": "Citadine",
+        "advantage": "Très maniable en ville avec une consommation réduite et un coût d’achat et d’entretien assez faible, et facile stationner"
+    },
+    "1": {
+        "name": "Berline",
+        "advantage": "Confort supérieur, bonne tenue de route, habitabilité et coffre généreux, idéale pour longs trajets"
+    },
+    "2": {
+        "name": "SUV / Crossover",
+        "advantage": "Position de conduite surélevée, polyvalence et habitabilité, impression de sécurité, garde au sol plus haute"
+    },
+    "3": {
+        "name": "4x4 / Tout-terrain",
+        "advantage": "Excellente motricité hors route, très robustes, capacité de traction élevée"
+    },
+    "4": {
+        "name": "Monospace / MPV",
+        "advantage": "Idéal pour familles nombreuses, modularité intérieure (sièges amovibles, coulissants), confort et espace exceptionnels"
+    },
+    "5": {
+        "name": "Break",
+        "advantage": "Grand volume de coffre, polyvalence (berline + espace), conduite proche d’une berline mais plus pratique"
+    },
+    "6": {
+        "name": "Coupé",
+        "advantage": "Style sportif, très bonne tenue de route, sensations de conduite"
+    },
+    "7": {
+        "name": "Cabriolet / Convertible",
+        "advantage": "Conduite plaisir à ciel ouvert, style distinctif"
+    },
+    "8": {
+        "name": "Utilitaire / Fourgonnette",
+        "advantage": "Grande capacité de chargement, robuste et pratique pour professionnels"
+    }
+}

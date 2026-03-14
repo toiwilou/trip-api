@@ -1,0 +1,162 @@
+{
+    "0": {
+        "type": "apartment",
+        "id": 4,
+        "customer": "emma.durand@example.com",
+        "begin_date": "2025-05-01",
+        "end_date": "2025-05-07",
+        "status": "Confirmée"
+    },
+    "1": {
+        "type": "vehicle",
+        "id": 3,
+        "customer": "lucas.martin@example.com",
+        "begin_date": "2025-06-10",
+        "end_date": "2025-06-15",
+        "status": "En attente"
+    },
+    "2": {
+        "type": "apartment",
+        "id": 8,
+        "customer": "noah.bernard@example.com",
+        "begin_date": "2025-07-03",
+        "end_date": "2025-07-10",
+        "status": "Confirmée"
+    },
+    "3": {
+        "type": "vehicle",
+        "id": 11,
+        "customer": "manon.moreau@example.com",
+        "begin_date": "2025-08-12",
+        "end_date": "2025-08-16",
+        "status": "Annulée"
+    },
+    "4": {
+        "type": "apartment",
+        "id": 2,
+        "customer": "hugo.richard@example.com",
+        "begin_date": "2025-09-01",
+        "end_date": "2025-09-05",
+        "status": "En attente"
+    },
+    "5": {
+        "type": "vehicle",
+        "id": 6,
+        "customer": "lea.robert@example.com",
+        "begin_date": "2025-09-20",
+        "end_date": "2025-09-25",
+        "status": "Confirmée"
+    },
+    "6": {
+        "type": "apartment",
+        "id": 16,
+        "customer": "clara.simon@example.com",
+        "begin_date": "2025-10-02",
+        "end_date": "2025-10-08",
+        "status": "Confirmée"
+    },
+    "7": {
+        "type": "vehicle",
+        "id": 8,
+        "customer": "tom.garcia@example.com",
+        "begin_date": "2025-10-15",
+        "end_date": "2025-10-20",
+        "status": "En attente"
+    },
+    "8": {
+        "type": "apartment",
+        "id": 23,
+        "customer": "sarah.leroy@example.com",
+        "begin_date": "2025-11-05",
+        "end_date": "2025-11-12",
+        "status": "Confirmée"
+    },
+    "9": {
+        "type": "vehicle",
+        "id": 15,
+        "customer": "julie.david@example.com",
+        "begin_date": "2025-11-18",
+        "end_date": "2025-11-22",
+        "status": "Expirée"
+    },
+    "10": {
+        "type": "apartment",
+        "id": 11,
+        "customer": "manon.moreau@example.com",
+        "begin_date": "2025-12-01",
+        "end_date": "2025-12-07",
+        "status": "Confirmée"
+    },
+    "11": {
+        "type": "vehicle",
+        "id": 1,
+        "customer": "ethan.roux@example.com",
+        "begin_date": "2025-12-10",
+        "end_date": "2025-12-14",
+        "status": "En attente"
+    },
+    "12": {
+        "type": "apartment",
+        "id": 30,
+        "customer": "hugo.richard@example.com",
+        "begin_date": "2025-12-20",
+        "end_date": "2025-12-27",
+        "status": "Confirmée"
+    },
+    "13": {
+        "type": "vehicle",
+        "id": 13,
+        "customer": "manon.moreau@example.com",
+        "begin_date": "2025-12-28",
+        "end_date": "2026-01-02",
+        "status": "Confirmée"
+    },
+    "14": {
+        "type": "apartment",
+        "id": 6,
+        "customer": "clara.simon@example.com",
+        "begin_date": "2025-12-30",
+        "end_date": "2026-01-05",
+        "status": "En attente"
+    },
+    "15": {
+        "type": "vehicle",
+        "id": 10,
+        "customer": "tom.garcia@example.com",
+        "begin_date": "2026-01-10",
+        "end_date": "2026-01-15",
+        "status": "Confirmée"
+    },
+    "16": {
+        "type": "apartment",
+        "id": 13,
+        "customer": "noah.bernard@example.com",
+        "begin_date": "2026-01-18",
+        "end_date": "2026-01-25",
+        "status": "Annulée"
+    },
+    "17": {
+        "type": "vehicle",
+        "id": 4,
+        "customer": "lucas.martin@example.com",
+        "begin_date": "2026-02-02",
+        "end_date": "2026-02-06",
+        "status": "Confirmée"
+    },
+    "18": {
+        "type": "apartment",
+        "id": 9,
+        "customer": "emma.durand@example.com",
+        "begin_date": "2026-02-10",
+        "end_date": "2026-02-16",
+        "status": "En attente"
+    },
+    "19": {
+        "type": "vehicle",
+        "id": 30,
+        "customer": "julie.david@example.com",
+        "begin_date": "2026-02-20",
+        "end_date": "2026-02-25",
+        "status": "Confirmée"
+    }
+}

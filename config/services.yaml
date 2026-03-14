@@ -5,6 +5,14 @@
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
 
+    # Constantes
+    firstname_first_user: "%env(firstname_first_user)%"
+    lastname_first_user: "%env(lastname_first_user)%"
+    email_first_user: "%env(email_first_user)%"
+    password_user: "%env(default_password_user)%"
+    admin_email: "%env(ADMIN_EMAIL)%"
+    base_email: "%env(EMAIL)%"
+
 services:
     # default configuration for services in *this* file
     _defaults:

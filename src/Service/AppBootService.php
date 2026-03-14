@@ -21,13 +21,11 @@ class AppBootService
         $this->categoryApartmentService = $categoryApartmentService;
     }
 
-    public function boot(): string
+    public function boot(): void
     {
         $this->statusService->createAll();
         $this->userService->createFirstUser();
         $this->categoryVehicleService->createAll();
         $this->categoryApartmentService->createAll();
-
-        return 'SUCCESS';
     }
 }

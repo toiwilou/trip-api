@@ -1,0 +1,18 @@
+{
+    "0": {
+        "name": "En attente",
+        "color": "#dbd074"
+    },
+    "1": {
+        "name": "Confirmée",
+        "color": "#51b86c"
+    },
+    "2": {
+        "name": "Annulée",
+        "color": "#db9ca5"
+    },
+    "3": {
+        "name": "Expirée",
+        "color": "#c0cccb"
+    }
+}

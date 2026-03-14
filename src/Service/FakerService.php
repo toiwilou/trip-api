@@ -56,7 +56,7 @@ class FakerService
         $this->categoryApartmentRepository = $categoryApartmentRepository;
     }
 
-    public function createAll(): string
+    public function createAll(): void
     {
         $vehicles = json_decode(file_get_contents(__DIR__ . '/../../jsons/vehicles.json'), true);
         $apartments = json_decode(file_get_contents(__DIR__ . '/../../jsons/apartments.json'), true);
@@ -67,8 +67,6 @@ class FakerService
         $this->createVehicles($vehicles);
         $this->createCustomers($customers);
         $this->createReservations($reservations);
-
-        return 'SUCCESS';
     }
 
     public function createApartments(array $apartments): void
